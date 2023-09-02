@@ -10,6 +10,7 @@ services:
       POSTGRES_NAME: ${name}
       POSTGRES_USER: ${user}
       POSTGRES_PASSWORD: ${password}
+      POSTGRES_HOST: ${host}
     restart: always
     container_name: db
     volumes:
