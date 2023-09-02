@@ -75,9 +75,11 @@ WSGI_APPLICATION = 'parser_config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv('name'),
-        'USER': 'postgres',
-        'PASSWORD': os.getenv('password')
+        'NAME': os.environ.get('name'),
+        'USER': os.environ.get('user'),
+        'PASSWORD': os.environ.get('password'),
+        'HOST': os.environ.get('host', 'localhost'),
+        'PORT': os.environ.get('port', '5432'),
     }
 }
 
