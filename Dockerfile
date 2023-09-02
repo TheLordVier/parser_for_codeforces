@@ -1,6 +1,6 @@
 FROM python:3.10-slim
 
-WORKDIR /opt/electronic_store
+WORKDIR /opt/parser_for_codeforces
 
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
