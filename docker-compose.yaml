@@ -7,9 +7,9 @@ services:
     ports:
       - "5432:5432"
     environment:
-      name: ${name}
-      user: ${user}
-      password: ${password}
+      POSTGRES_NAME: ${name}
+      POSTGRES_USER: ${user}
+      POSTGRES_PASSWORD: ${password}
     restart: always
     container_name: db
     volumes:
